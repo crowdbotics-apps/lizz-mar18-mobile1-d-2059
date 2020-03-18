@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from rest_framework import authentication
 from .serializers import (
-    CustomModel344pmSerializer,
     CustomModel345pmSerializer,
+    CustomModel344pmSerializer,
     HomePageSerializer,
     CustomTextSerializer,
 )
@@ -19,7 +19,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomModel344pm, CustomModel345pm, HomePage, CustomText
+from home.models import CustomModel345pm, CustomModel344pm, HomePage, CustomText
 
 
 class SignupViewSet(ModelViewSet):
