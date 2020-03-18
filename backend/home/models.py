@@ -36,3 +36,8 @@ class HomePage(models.Model):
 class CustomModel344pm(models.Model):
     "Generated Model"
     meaningless_field = models.TextField()
+
+
+class CustomModel345pm(models.Model):
+    "Generated Model"
+    test = models.BigIntegerField()

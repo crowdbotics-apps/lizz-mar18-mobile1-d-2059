@@ -2,6 +2,7 @@ from rest_framework import viewsets
 from rest_framework import authentication
 from .serializers import (
     CustomModel344pmSerializer,
+    CustomModel345pmSerializer,
     CustomTextSerializer,
     HomePageSerializer,
 )
@@ -18,7 +19,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomModel344pm, CustomText, HomePage
+from home.models import CustomModel344pm, CustomModel345pm, CustomText, HomePage
 
 
 class SignupViewSet(ModelViewSet):
@@ -65,3 +66,12 @@ class CustomModel344pmViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = CustomModel344pm.objects.all()
+
+
+class CustomModel345pmViewSet(viewsets.ModelViewSet):
+    serializer_class = CustomModel345pmSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = CustomModel345pm.objects.all()
